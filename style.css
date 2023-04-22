@@ -4,6 +4,14 @@ body{
     background-size: 20%;
     background-position: 0% 50%;
 }   
+.reset{
+    position:absolute;
+    left: 15px;
+    top: 10px;
+    border: 3px solid black;
+    border-radius: 4px;
+    color: red;
+}
 .h3{
     position: absolute;
     left: 15px;
@@ -20,22 +28,11 @@ body{
     right: 25px;
     gap: 20px;
 }
-button{
+.buttons button{
     padding: 20px;
     border-radius: 5px;
 }
-.btnBL{
-    background-color: black;
-}
-.btnG{
-    background-color: green;
-}
-.btnB{
-    background-color: blue;
-}
-.btnR{
-    background-color: red;
-}
+
 h1{
     text-align:center;
     font-size: 40pt;

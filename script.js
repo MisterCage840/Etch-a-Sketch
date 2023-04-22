@@ -1,8 +1,9 @@
 const mainGrid = document.querySelector('.mainGrid');
 const mainContainer = document.querySelector('.mainContainer');
 const btns = document.querySelectorAll('button');
+const resetBtn = document.querySelector('.reset');
 const onOff = document.querySelector('.brushState');
-let colorArray = ['black','green','blue','red'];
+let colorArray = ['black','green','blue','red','white','yellow','orange','pink'];
 let fillColor = ""; 
 for(let i=0; i<btns.length; i++){
     let temp = btns.item(i);
@@ -48,6 +49,21 @@ function color (){
     this.style.background = fillColor;
 }
 
+resetBtn.style.backgroundColor = 'aliceblue';
+resetBtn.style.fontSize = '20px';
 
-
-
+function danger(){
+    this.style.background = 'red';
+    this.style.color = 'blue';
+}
+resetBtn.addEventListener("mouseover", danger);
+resetBtn.addEventListener("mouseout", ()=>{
+    resetBtn.style.backgroundColor = 'aliceblue';
+    resetBtn.style.color = 'red';
+});
+function reset(){
+    grids.forEach(grid =>{
+        grid.style.backgroundColor = 'white';
+    })
+}
+resetBtn.addEventListener("click", reset);
