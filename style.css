@@ -1,7 +1,40 @@
 body{
     background-image: url('etchy.jpg');
     background-repeat: no-repeat;
-    background-position: 0% 80%;
+    background-size: 20%;
+    background-position: 0% 50%;
+}   
+.h3{
+    position: absolute;
+    left: 15px;
+    top: 50px;
+    font-size: 20pt;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 25px;
+    gap: 20px;
+}
+button{
+    padding: 20px;
+    border-radius: 5px;
+}
+.btnBL{
+    background-color: black;
+}
+.btnG{
+    background-color: green;
+}
+.btnB{
+    background-color: blue;
+}
+.btnR{
+    background-color: red;
 }
 h1{
     text-align:center;
@@ -22,7 +55,7 @@ h1{
 }
 
 .smallGrid{
-    padding: 20px;
+    padding: 25px;
 
 }
 footer{
