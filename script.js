@@ -1,9 +1,10 @@
 const mainGrid = document.querySelector('.mainGrid');
 const mainContainer = document.querySelector('.mainContainer');
-const btns = document.querySelectorAll('button');
+const btns = document.querySelectorAll('.btn');
 const resetBtn = document.querySelector('.reset');
 const onOff = document.querySelector('.brushState');
-let colorArray = ['black','green','blue','red','white','yellow','orange','pink'];
+const inputButton = document.querySelector('.inputBtn');
+let colorArray = ['black','green','blue','red','white','yellow','orange','palevioletred'];
 let fillColor = ""; 
 for(let i=0; i<btns.length; i++){
     let temp = btns.item(i);
@@ -20,7 +21,32 @@ for(let i=1; i<=16; i++){
     }
     mainGrid.appendChild(blockGrid);
 }
+
+inputButton.addEventListener("click", ()=>{
+    let userinput = window.prompt("Enter number of grids that you desire");
+    while(userinput>100){
+       userinput = window.prompt("Enter your desired number of grids less than 100"); 
+    }
+    let newPad = (800 / userinput)/2;
+    console.log(newPad);
+    grids.forEach(grid =>{
+        grid.remove();
+    });
+
+    blocks.forEach(block =>{
+            for(let i=1; i<=userinput; i++){
+                let newGrid = document.createElement('div');
+                newGrid.style.padding = newPad + "px";
+                newGrid.addEventListener("mouseover", color);
+                block.appendChild(newGrid);
+            }
+    });
+    
+});
+
+
 const grids = document.querySelectorAll('.smallGrid');
+const blocks = document.querySelectorAll('.blockGrid');
 
 window.addEventListener("keydown",(event)=>{
     let key = event.key;
@@ -67,3 +93,11 @@ function reset(){
     })
 }
 resetBtn.addEventListener("click", reset);
+
+inputButton.style.backgroundColor = 'aliceblue';
+inputButton.addEventListener("mouseover", danger);
+inputButton.addEventListener("mouseout", ()=>{
+    inputButton.style.backgroundColor = 'aliceblue';
+    inputButton.style.color = 'black';
+});
+

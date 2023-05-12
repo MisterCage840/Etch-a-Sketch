@@ -3,7 +3,15 @@ body{
     background-repeat: no-repeat;
     background-size: 20%;
     background-position: 0% 50%;
-}   
+} 
+.inputBtn{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 15pt;
+} 
 .reset{
     position:absolute;
     left: 15px;
@@ -53,7 +61,6 @@ h1{
 
 .smallGrid{
     padding: 25px;
-
 }
 footer{
     left: 10px;
